@@ -1,0 +1,76 @@
+# Walkthrough - Shadcn/UI Components & Build Fix
+
+Generated and installed the full set of 46 standard shadcn/ui components in `app/frontend/src/components/ui/`, provided the necessary `cn` utility in `src/lib/utils.js`, added toast notification hooks, integrated theme tokens in `src/index.css`, and verified that the React frontend compiles cleanly.
+
+## Changes Made
+
+### Core Utilities & Hooks
+- Created [utils.js](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/lib/utils.js):
+  - Defined `cn(...)` using `clsx` and `tailwind-merge`.
+- Created [use-toast.js](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/hooks/use-toast.js) and [use-toast.js](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/use-toast.js):
+  - Radix-based toast state machine, reducer, and event dispatcher.
+
+### Theme & Styling
+- Updated [index.css](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/index.css):
+  - Added `@layer base` CSS variables for `--background`, `--foreground`, `--card`, `--primary`, `--border`, etc. mapped to `tailwind.config.js`.
+
+### UI Components (`src/components/ui/`)
+Generated 46 standard shadcn/ui JavaScript components:
+- [sonner.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/sonner.jsx) (resolving `App.js` import)
+- [button.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/button.jsx)
+- [card.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/card.jsx)
+- [dialog.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/dialog.jsx)
+- [toast.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/toast.jsx) & [toaster.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/toaster.jsx)
+- [badge.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/badge.jsx)
+- [input.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/input.jsx) & [textarea.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/textarea.jsx)
+- [label.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/label.jsx)
+- [select.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/select.jsx)
+- [switch.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/switch.jsx)
+- [tabs.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/tabs.jsx)
+- [tooltip.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/tooltip.jsx)
+- [table.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/table.jsx)
+- [skeleton.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/skeleton.jsx)
+- [separator.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/separator.jsx)
+- [progress.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/progress.jsx)
+- [popover.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/popover.jsx)
+- [accordion.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/accordion.jsx)
+- [alert.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/alert.jsx) & [alert-dialog.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/alert-dialog.jsx)
+- [avatar.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/avatar.jsx)
+- [breadcrumb.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/breadcrumb.jsx)
+- [calendar.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/calendar.jsx)
+- [carousel.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/carousel.jsx)
+- [checkbox.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/checkbox.jsx)
+- [collapsible.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/collapsible.jsx)
+- [command.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/command.jsx)
+- [context-menu.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/context-menu.jsx)
+- [drawer.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/drawer.jsx)
+- [dropdown-menu.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/dropdown-menu.jsx)
+- [form.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/form.jsx)
+- [hover-card.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/hover-card.jsx)
+- [input-otp.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/input-otp.jsx)
+- [menubar.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/menubar.jsx)
+- [navigation-menu.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/navigation-menu.jsx)
+- [pagination.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/pagination.jsx)
+- [radio-group.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/radio-group.jsx)
+- [resizable.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/resizable.jsx)
+- [scroll-area.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/scroll-area.jsx)
+- [sheet.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/sheet.jsx)
+- [slider.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/slider.jsx)
+- [toggle.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/toggle.jsx) & [toggle-group.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/toggle-group.jsx)
+- [aspect-ratio.jsx](file:///c:/Users/lenovo/OneDrive/Desktop/Namest/app/frontend/src/components/ui/aspect-ratio.jsx)
+
+---
+
+## Verification Results
+
+### Production Build Test
+Ran `npm run build` (`craco build`) in `app/frontend`:
+```
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+  101.82 kB  build\static\js\main.c68c95e0.js
+  9.87 kB    build\static\css\main.b6491354.css
+```
+Result: **Exit code 0 (Compiled successfully with 0 errors)**
