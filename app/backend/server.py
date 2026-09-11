@@ -185,6 +185,8 @@ async def recent_searches(limit: int = 8) -> list[dict[str, Any]]:
         .sort("checked_at", -1).to_list(length=limit)
 
 
+app.include_router(api_router)
+
 cors_origins = [
     origin.strip()
     for origin in os.environ.get("CORS_ORIGINS", "http://localhost:3000").split(",")
