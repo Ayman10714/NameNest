@@ -96,7 +96,7 @@ npm start
 
 1. Start the backend (`uvicorn server:app --reload`)
 2. Start the frontend (`npm start`)
-3. Open `http://localhost:3000`, type a name, click **Check**
+3. Open `https://namenest-ilib.onrender.com/`, type a name, click **Check**
 
 ## Future Ideas
 
